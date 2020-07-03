@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Assignment extends Model
 {
-    public function toggleComplete()
+    public function complete()
     {
-        $this->completed = (! $this->completed);
+        $this->completed = true;
         $this->save();
     }
 }
